@@ -28,15 +28,16 @@ public:
 	//Chain(const Chain &rhs) = default;
 
 	Chain(const Chain &rhs) {
-		array_=new Object(*rhs.array);
+		array_ = new Object(*rhs.array);
 	}
 
 	//Move-constructor
 
-Chain (Chain &&rhs):size_{rhs.size_},array_{rhs.array_}{
-	rhs.array_=nullptr;
-	rhs.size=0;
-}
+	Chain(Chain &&rhs) :
+			size_ { rhs.size_ }, array_ { rhs.array_ } {
+		rhs.array_ = nullptr;
+		rhs.size = 0;
+	}
 	// Copy-assignment. If you have already written
 	// the copy-constructor and the move-constructor
 	// you can just use:
@@ -45,17 +46,32 @@ Chain (Chain &&rhs):size_{rhs.size_},array_{rhs.array_}{
 	// std::swap(*this, copy);
 	// return *this;
 	// }
-	Chain& operator=(const Chain &rhs) = default;
+//	Chain& operator=(const Chain &rhs) = default;
 
 	// Move-constructor.
-	Chain(Chain &&rhs) = default;
+	//Chain(Chain &&rhs) = default;
 
 	// Move-assignment.
 	// Just use std::swap() for all variables.
-	Chain& operator=(Chain &&rhs) = default;
+	//Chain& operator=(Chain &&rhs) = default;
+
+	// Move-assignment.
+	Chain& operator=(const Chain &rhs) {
+		Chain copy = rhs;
+		std::swap(*this, copy);
+		return *this;
+	}
+
+	//copy assignment operator
+	Chain& operator=(Chain &rhs) {
+		std::swap(size_, rhs.size_t);
+		std::swap(array_, rhs.array);
+		return *this;
+	}
 
 	~Chain() {
 		// Provide destructor.
+		delete[] array_;
 	}
 
 	// End of big-five.
