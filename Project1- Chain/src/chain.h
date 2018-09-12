@@ -129,7 +129,7 @@ public:
       } // Iterate to the part until : sign
       input = (input.substr(i + 1, input.length() - 1)); // Eliminate : sign
       std::stringstream linestream(input); // To input to array_
-      for (int j = 0; j < size_; j++) {
+      for (unsigned int j = 0; j < size_; j++) {
         linestream >> array_[j];
       }
       delete[] c;
