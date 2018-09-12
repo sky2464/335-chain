@@ -1,5 +1,4 @@
-// Salem Saboori
-// Salem.Saboori00@myhunter.cuny.edu
+// Navid / Sky2464
 // Create and test a class called Chain. A chain is just a series of items, e.g. [2 7 -1 43] is a chain containing four integers.
 // A Chain can have any size. An empty Chain has size 0.
 
