@@ -1,3 +1,23 @@
+Sky2464 / Navid
+https://github.com/sky2464/335-chain
+
+How to run this program:
+1- Extract all files in a folder.
+2- In the bash terminal make all
+3- ./test_chain <test_input_file.txt
+
+Information:
+Uncompleted Chain Program, provided to 335's students by Prof. Stamos, Hunter College.
+Implemented the “big five”:
+    copy constructor
+    copy assignment operator
+    destructor
+    move constructor
+    move assignment operator
+ Coded ReadChain() to read from the sample file and modified other parts as needed.
+ Also followed Google STYLE format.
+
+Read More:
 Create and test a class called Chain. A chain is just a series of items, e.g. [2 7 -1 43] is a chain
 containing four integers. A Chain can have any size. An empty Chain has size 0.
 The purpose of this assignment is to have you create a Chain class from scratch without using the
